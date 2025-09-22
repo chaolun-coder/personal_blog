@@ -1,0 +1,13 @@
+[1mdiff --git a/_config.yml b/_config.yml[m
+[1mindex c780164..55e4e46 100644[m
+[1m--- a/_config.yml[m
+[1m+++ b/_config.yml[m
+[36m@@ -13,7 +13,7 @@[m [mtimezone: 'Asia/Shanghai'[m
+ [m
+ # URL[m
+ ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'[m
+[31m-url: git@github.com:chaolun-coder/personal_blog.git[m
+[32m+[m[32murl: https://chaolun-coder.github.io/personal_blog[m
+ permalink: :year/:month/:day/:title/[m
+ permalink_defaults:[m
+ pretty_urls:[m

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1><%= config.title %></h1>
+    <p><%= config.subtitle %></p>
+  </header>
+  
+  <main>
+    <% site.posts.each(function(post){ %>
+      <article>
+        <h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+        <time><%= date(post.date, 'YYYY-MM-DD') %></time>
+        <div><%- post.excerpt || post.content %></div>
+      </article>
+    <% }) %>
+  </main>
+</body>
+</html>
