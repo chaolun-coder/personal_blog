@@ -4,10 +4,10 @@
 
 # Site
 title: 个人博客
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+subtitle: '分享技术与生活'
+description: '记录学习历程，分享技术心得'
+keywords: 'blog,技术,编程,生活'
+author: chaolun-coder
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: []
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -66,8 +66,8 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: {}
+tag_map: {}
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -91,7 +91,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include: []
 exclude: []
-ignore:
+ignore: []
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -102,5 +102,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:chaolun-coder/personal_blog.git
+  repository: https://github.com/chaolun-coder/personal_blog.git
   branch: main

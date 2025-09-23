@@ -86,3 +86,8 @@ Desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+
+node_modules/
+db.json
+.deploy_git/
