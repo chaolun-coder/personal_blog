@@ -1,0 +1,208 @@
+---
+import { Image } from 'astro:assets'
+
+import { Button, Collapse, Icon } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+import alipay from '@/assets/alipay-qrcode.jpg'
+import KeyIcon from '@/assets/icons/key.svg'
+import wechat from '@/assets/wechat-qrcode.jpg'
+import config from '@/site-config'
+
+const headings = [
+  { depth: 2, slug: 'theme', text: 'Theme' },
+  { depth: 2, slug: 'programs', text: 'Programs' },
+  { depth: 2, slug: 'learnings', text: 'Learnings' },
+  { depth: 2, slug: 'others', text: 'Others' },
+  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+]
+---
+
+<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+  <p>Github Activities:</p>
+  <p>
+    <Image
+      src='https://ghchart.rshah.org/659eb9/JohnieXu'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
+  </p>
+  <p>
+    If you think it would be useful or interesting to collaborate on a project, you can donate to
+    support my work or contact me to discuss a project.
+  </p>
+  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
+    <Icon class='size-5' name='receive-money' slot='before' />
+  </Button>
+
+  <h2 id='theme'>Library</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: '75_action',
+        description: '一个自动抓取全部奇舞周刊文章链接的脚本。',
+        links: [
+          { type: 'github', href: 'https://github.com/JohnieXu/75_action' },
+          { type: 'site', href: 'https://github.com/JohnieXu/75_action' },
+          {
+            type: 'doc',
+            href: 'https://github.com/JohnieXu/75_action/blob/master/README.md'
+          }
+        ]
+      },
+      {
+        name: 'idinofe/xt-core',
+        description: '一个可靠的、充分测试的 JS 工具方法库。',
+        links: [
+          { type: 'github', href: 'https://github.com/idinofe/xt-core' },
+          { type: 'site', href: 'https://idinofe.github.io/xt-core/' },
+          {
+            type: 'doc',
+            href: 'https://idinofe.github.io/xt-core/'
+          }
+        ]
+      },
+      {
+        name: 'decrypt-core',
+        description: '对 crypto-js 中 TDEA(Triple DES) 算法的简单包装，更简洁更易于使用，支持环境更丰富。',
+        links: [
+          { type: 'github', href: 'https://github.com/JohnieXu/decrypt-core' },
+          { type: 'site', href: 'https://github.com/JohnieXu/decrypt-core' },
+          {
+            type: 'doc',
+            href: 'https://github.com/JohnieXu/decrypt-core/blob/master/README.md'
+          }
+        ]
+      }
+    ]}
+  />
+
+  <h2 id='programs'>Programs</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: '📒 vant-weapp',
+        description:
+          '基于有赞vant-weapp的小程序项目。',
+        links: [
+          { type: 'github', href: 'https://github.com/JohnieXu/vant-weapp' },
+          {
+            type: 'site',
+            href: 'https://github.com/JohnieXu/vant-weapp'
+          }
+        ]
+      },
+      {
+        name: '💄 eureka',
+        description: '基于 Go 的跨平台文件加密/解密工具。',
+        links: [
+          { type: 'github', href: 'https://github.com/JohnieXu/eureka' },
+          { type: 'site', href: 'https://github.com/JohnieXu/eureka' },
+        ]
+      }
+    ]}
+  />
+  <Collapse title='Some old projects'>
+    <ProjectSection
+      projects={[
+        {
+          name: 'exif-edit',
+          description: '一个基于 vue 的图片 exif 数据编辑器组件。',
+          links: [
+            { type: 'github', href: 'https://github.com/JohnieXu/exif-edit' },
+            { type: 'site', href: 'https://exif-edit.vercel.app/' }
+          ]
+        },
+        {
+          name: 'xtjk-decrypt',
+          description: '基于Node.js的数据加解密工具，可应用于web应用调试。',
+          links: [
+            { type: 'github', href: 'https://github.com/JohnieXu/xtjk-decrypt' },
+          ]
+        },
+        {
+          name: 'xtjk-decrypt-chrome',
+          description: '基于 3DES 算法的数据加解密 Chrome 插件。',
+          links: [
+            { type: 'github', href: 'https://github.com/JohnieXu/xtjk-decrypt-chrome' },
+          ]
+        },
+        {
+          name: 'excel-demo',
+          description: '纯前端实现 Excel 文件在线解析和预览功能的 demo。',
+          links: [
+            { type: 'github', href: 'https://github.com/JohnieXu/excel-demo' },
+            { type: 'site', href: 'https://excel-demo.vercel.app/' }
+          ]
+        }
+      ]}
+    />
+  </Collapse>
+
+  <h2 id='others'>Others</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: 'xx-blog',
+        description: "JohnieXu's Blog (旧版)",
+        links: [
+          { type: 'github', href: 'https://github.com/JohnieXu/xx-blog' },
+          { type: 'site', href: 'https://johniexu.github.io/xx-blog/' }
+        ]
+      },
+      {
+        name: 'JohnieXu',
+        description: 'JohnieXu Github',
+        links: [{ type: 'github', href: 'https://github.com/JohnieXu' }]
+      }
+    ]}
+  />
+
+  <!-- gpg signature -->
+  <h2 id='gpg-signature'>GPG Signature</h2>
+  <p>
+    You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
+    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
+  </p>
+  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
+    <KeyIcon class='size-5' slot='before' />
+  </Button>
+</PageLayout>
+
+<script
+  is:inline
+  type='module'
+  data-astro-rerun
+  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
+>
+  const loadPageviewCount = async () => {
+    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
+    pageview.pageviewCount({
+      serverURL: walineServer,
+      path: window.location.pathname
+    })
+  }
+
+  await loadPageviewCount()
+</script>
+
+<style>
+  .sponsorship-card {
+    & .sponsorship-card-img {
+      opacity: 0.3;
+      --un-blur: blur(4px);
+      filter: var(--un-blur);
+    }
+
+    &:hover {
+      & .sponsorship-card-icon {
+        opacity: 0;
+      }
+      & .sponsorship-card-img {
+        opacity: 1;
+        --un-blur: blur(0);
+      }
+    }
+  }
+</style>
