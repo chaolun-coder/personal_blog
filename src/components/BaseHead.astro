@@ -19,16 +19,16 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <title>{siteTitle}</title>
 
 {/* Icons / Favicon */}
-<link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
-<link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
-<link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
-<link rel='manifest' href='/favicon/site.webmanifest' />
+<link rel='apple-touch-icon' sizes='180x180' href={Astro.base + '/favicon/apple-touch-icon.png'} />
+<link rel='icon' type='image/png' sizes='32x32' href={Astro.base + '/favicon/favicon-32x32.png'} />
+<link rel='icon' type='image/png' sizes='16x16' href={Astro.base + '/favicon/favicon-16x16.png'} />
+<link rel='manifest' href={Astro.base + '/favicon/site.webmanifest'} />
 
 {/* Font preloads */}
-<link rel='preload' href='/fonts/Satoshi-Variable.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href={Astro.base + '/fonts/Satoshi-Variable.ttf'} as='font' type='font/ttf' crossorigin />
 <link
   rel='preload'
-  href='/fonts/Satoshi-VariableItalic.ttf'
+  href={Astro.base + '/fonts/Satoshi-VariableItalic.ttf'}
   as='font'
   type='font/ttf'
   crossorigin
@@ -72,20 +72,20 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <meta content={socialImageURL} property='twitter:image' />
 
 {/* Sitemap */}
-<link href='/sitemap-index.xml' rel='sitemap' />
+<link href={Astro.base + '/sitemap-index.xml'} rel='sitemap' />
 
 {/* RSS auto-discovery */}
 <link
   rel='alternate'
   type='application/rss+xml'
   title={config.title}
-  href={`${Astro.site}rss.xml`}
+  href={Astro.base + '/rss.xml'}
 />
 
 <meta content={Astro.generator} name='generator' />
 
 {/* Styles */}
-<link rel='stylesheet' href='/styles/global.css' />
+<link rel='stylesheet' href={Astro.base + '/styles/global.css'} />
 
 {/* View transitions */}
 <!-- <ClientRouter /> -->

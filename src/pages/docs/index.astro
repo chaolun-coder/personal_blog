@@ -13,7 +13,7 @@ const meta = {
 ---
 
 <PageLayout {meta}>
-  <Button title='Back' href='/' style='back' />
+  <Button title='Back' href={Astro.base} style='back' />
   <main class='mt-6 lg:mt-10'>
     <div id='content-header' class='animate'>
       <h1 class='mb-6 text-3xl font-medium'>Docs of Astro Theme Pure</h1>
@@ -32,7 +32,7 @@ const meta = {
       </p>
       <h2 class='text-xl font-medium'>News Describe (Alpha)</h2>
       <p>
-        <a href='/docs/rss.xml' target='_blank'><Icon name='rss' /> </a>
+        <a href={Astro.base + '/docs/rss.xml'} target='_blank'><Icon name='rss' /> </a>
       </p>
     </div>
   </main>

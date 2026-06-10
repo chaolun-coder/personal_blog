@@ -26,8 +26,8 @@ import config from './src/site.config.ts'
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://chaolun-coder.github.io/personal_blog/',
-  base: '/personal_blog',
+  site: 'https://github.com/chaolun-coder/personal_blog',
+  // base: '/personal_blog',
   trailingSlash: 'never',
 
   // Adapter
