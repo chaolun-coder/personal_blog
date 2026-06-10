@@ -27,7 +27,7 @@ const { Content, headings } = await render(post)
 const { description, title } = post.data
 ---
 
-<PageLayout meta={{ description, title }} back='/docs'>
+<PageLayout meta={{ description, title }} back={import.meta.env.BASE_URL + '/docs'}>
   <Fragment slot='sidebar'>
     {!!headings.length && <TOC {headings} />}
     <DocsContents class='docs-toc block mt-3' />

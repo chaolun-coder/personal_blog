@@ -46,7 +46,7 @@ const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-tex
 <PageLayout
   meta={{ articleDate, description, ogImage: socialImage, title }}
   highlightColor={primaryColor}
-  back='/blog'
+  back={import.meta.env.BASE_URL + '/blog'}
 >
   {!!headings.length && <TOC {headings} slot='sidebar' />}
 

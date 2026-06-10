@@ -5,6 +5,8 @@ import type { InferEntrySchema } from 'astro:content'
 import { PageInfo } from '.'
 import { FormattedDate, Icon } from '../user'
 
+const base = import.meta.env.BASE_URL || '/'
+
 interface Props {
   data: InferEntrySchema<'blog'>
   remarkPluginFrontmatter: Record<string, unknown>
@@ -101,7 +103,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
                 aria-label={`View more blogs with the tag ${tag}`}
                 class='hover:underline hover:underline-offset-4'
                 data-pagefind-filter='tag'
-                href={`/tags/${tag}`}
+                href={`${base}/tags/${tag}`}
               >
                 {tag}
               </a>

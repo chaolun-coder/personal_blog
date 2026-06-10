@@ -6,6 +6,8 @@ import type { HTMLTag, Polymorphic } from 'astro/types'
 import { cn } from '../../utils'
 import { Button, FormattedDate, Icon } from '../user'
 
+const base = import.meta.env.BASE_URL || '/'
+
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
   post: CollectionEntry<CollectionKey>
   detailed?: boolean
@@ -37,7 +39,7 @@ const postDate = data.updatedDate ?? data.publishDate
       !detailed && 'sm:flex-row',
       detailed && data.heroImage && 'max-md:pt-24'
     )}
-    href={`/blog/${id}`}
+    href={`${base}/blog/${id}`}
     data-astro-prefetch
   >
     {
@@ -119,7 +121,7 @@ const postDate = data.updatedDate ?? data.publishDate
       <ul class='tag-list mt-1 flex flex-wrap gap-2'>
         {data.tags.map((tag: string) => (
           <li>
-            <Button title={tag} href={`/tags/${tag}`} style='pill' />
+            <Button title={tag} href={`${base}/tags/${tag}`} style='pill' />
           </li>
         ))}
       </ul>

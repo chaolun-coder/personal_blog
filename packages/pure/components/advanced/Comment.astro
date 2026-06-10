@@ -42,11 +42,13 @@ const { class: className } = Astro.props
         (preset) => `${config.npmCDN}/@waline/emojis@1.2.0/${preset}` as WalineEmojiPresets
       )
 
+      const base = import.meta.env.BASE_URL || '/'
+
       walineInit({
         el: '#waline',
         serverURL: walineConfig.server || '',
         emoji,
-        reaction: ['/icons/heart-item.svg'],
+        reaction: [`${base}/icons/heart-item.svg`],
         ...walineConfig.additionalConfigs
       })
     }

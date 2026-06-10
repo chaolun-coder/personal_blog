@@ -1,8 +1,8 @@
-# JohnieXu's Blog
+# ChaoLun's Blog
 
 [English](./README.md) | [简体中文](./README-zh-CN.md)
 
-JohnieXu's bog built by Astro.
+ChaoLun's bog built by Astro.
 
 ![GitHub deployments](https://img.shields.io/github/deployments/johniexu/johniexu.github.io/github-pages?style=flat&label=GithubPages&link=https%3A%2F%2Fjohniexu.github.io)
 ![Static Badge](https://img.shields.io/badge/Astro-5.8.1-brightgreen?link=https%3A%2F%2Fgithub.com%2Fwithastro%2Fastro)

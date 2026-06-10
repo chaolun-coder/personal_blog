@@ -6,6 +6,8 @@ export {
   transformerNotationHighlight
 } from './shiki-official-transformers'
 
+const base = '/personal_blog'
+
 function parseMetaString(str = '') {
   return Object.fromEntries(
     str.split(' ').reduce((acc: [string, string | true][], cur) => {
@@ -116,7 +118,7 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
               },
               [
                 h('use', {
-                  href: '/icons/code.svg#mingcute-clipboard-line'
+                  href: `${base}/icons/code.svg#mingcute-clipboard-line`
                 })
               ]
             )
@@ -129,7 +131,7 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
               },
               [
                 h('use', {
-                  href: '/icons/code.svg#mingcute-file-check-line'
+                  href: `${base}/icons/code.svg#mingcute-file-check-line`
                 })
               ]
             )

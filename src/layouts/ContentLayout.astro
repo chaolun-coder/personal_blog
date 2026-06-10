@@ -12,7 +12,7 @@ interface Props {
   back?: string
 }
 
-const { meta, highlightColor, back = '/', ...props } = Astro.props
+const { meta, highlightColor, back = import.meta.env.BASE_URL, ...props } = Astro.props
 ---
 
 <PageLayout {meta} {highlightColor} {...props}>
