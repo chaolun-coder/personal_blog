@@ -60,7 +60,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           熟悉 Docker 等容器化工具。
           热爱开源，喜欢写博客。
         </p>
-        <Button title='More about me' class='w-fit self-end' href={Astro.base + '/about'} style='ahead' />
+        <Button title='More about me' class='w-fit self-end' href={import.meta.env.BASE_URL + '/about'} style='ahead' />
       </Section>
       {
         allPostsByDate.length > 0 && (
@@ -72,7 +72,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
                 </li>
               ))}
             </ul>
-            <Button title='More posts' class='w-fit self-end' href={Astro.base + '/blog'} style='ahead' />
+            <Button title='More posts' class='w-fit self-end' href={import.meta.env.BASE_URL + '/blog'} style='ahead' />
           </Section>
         )
       }
@@ -147,7 +147,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
             imagePath='/src/assets/projects/kseniia-zapiatkina-yATU3rg8tNI-unsplash.jpg'
           />
           <ProjectCard
-            href={Astro.base + '/projects'}
+            href={import.meta.env.BASE_URL + '/projects'}
             heading='More projects'
             subheading='Check out more projects'
             imagePath='/src/assets/projects/wen-qiao-g_w8I64FiO0-unsplash.jpg'

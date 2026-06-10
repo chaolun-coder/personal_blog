@@ -1,16 +1,3 @@
-/* Font */
-@font-face {
-  font-family: 'Satoshi';
-  src: url(var(--astro-base)/fonts/Satoshi-Variable.ttf);
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Satoshi';
-  src: url(var(--astro-base)/fonts/Satoshi-VariableItalic.ttf);
-  font-style: italic;
-  font-display: swap;
-}
 html {
   font-family: 'Satoshi', sans-serif;
 }

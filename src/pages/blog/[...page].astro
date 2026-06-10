@@ -50,7 +50,7 @@ const paginationProps = {
 ---
 
 <PageLayout {meta}>
-  <Button title='Back' href={Astro.base} style='back' />
+  <Button title='Back' href={import.meta.env.BASE_URL} style='back' />
   <main class='mt-6 lg:mt-10'>
     <div id='content-header' class='animate'>
       <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Blog</h1>
@@ -66,7 +66,7 @@ const paginationProps = {
               <span class='text-muted-foreground'>
                 Page {page.currentPage} - Showing {page.data.length} of {collectionsCount} posts
               </span>
-              <a aria-label='View all blog by years' href={Astro.base + '/archives'} data-astro-prefetch>
+              <a aria-label='View all blog by years' href={import.meta.env.BASE_URL + '/archives'} data-astro-prefetch>
                 View all posts by years →
               </a>
             </div>
@@ -89,12 +89,12 @@ const paginationProps = {
               <ul class='text-bgColor flex flex-wrap gap-2'>
                 {uniqueTags.map((tag) => (
                   <li>
-                    <Button title={tag} href={Astro.base + `/tags/${tag}`} style='pill' />
+                    <Button title={tag} href={import.meta.env.BASE_URL + `/tags/${tag}`} style='pill' />
                   </li>
                 ))}
               </ul>
               <span class='mt-4 block sm:text-end'>
-                <a aria-label='View all blog categories' href={Astro.base + '/tags'} data-astro-prefetch>
+                <a aria-label='View all blog categories' href={import.meta.env.BASE_URL + '/tags'} data-astro-prefetch>
                   View all →
                 </a>
               </span>

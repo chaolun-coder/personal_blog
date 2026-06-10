@@ -24,11 +24,7 @@ const {
   <head>
     <BaseHead {articleDate} {description} {ogImage} {title} />
     <ThemeProvider />
-    <style define:vars={{ astroBase: Astro.base }}>
-      :root {
-        --astro-base: var(--astroBase);
-      }
-    </style>
+    
   </head>
 
   <body class='flex justify-center bg-background text-foreground' {...props}>
